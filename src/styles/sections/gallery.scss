@@ -1,0 +1,43 @@
+.gallery {
+  height: 305px;
+
+  @include on-desktop {
+    height: 600px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+
+    @include on-desktop {
+      position: absolute;
+      left: 0;
+      width: 100vw;
+      height: 600px;
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+    & img {
+      display: block;
+      height: 305px;
+      object-fit: contain;
+      width: auto;
+      
+      object-fit: contain;
+      @include on-desktop {
+        height: 100%;
+      }
+    }
+
+    @include on-desktop {
+      max-width: 663px;
+      border-radius: 30px;
+    }
+  }
+}

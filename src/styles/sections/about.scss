@@ -1,0 +1,51 @@
+.about {
+  margin-top: 61px;
+
+  &__wrapper {
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+
+    @include on-desktop {
+      margin-top: 176px;
+      border-radius: 60px;
+      padding-block: 66px 80px;
+    }
+  }
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+
+    @include on-desktop {
+      font-size: 56px;
+    }
+  }
+
+  &__text {
+    margin-top: 13px;
+    font-size: 16px;
+    max-width: 650px;
+    text-align: center;
+
+    @include on-desktop {
+      margin-top: 43px;
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    margin-top: 28px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+
+    @include on-desktop {
+      margin-top: 49px;
+      height: 70px;
+      font-size: 24px;
+    }
+  }
+}

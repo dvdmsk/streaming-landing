@@ -1,0 +1,165 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 61px;
+  align-items: center;
+
+  @include on-desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 128px;
+  }
+
+  & h2 {
+    margin-top: 93px;
+    text-align: center;
+
+    @include on-desktop {
+      text-align: left;
+    }
+  }
+
+  & .text-section {
+    margin-top: 20px;
+    margin-bottom: 14px;
+    text-align: center;
+
+    @include on-desktop {
+      text-align: left;
+      margin-top: 40px;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__sign {
+    position: relative;
+  }
+
+  &__img {
+    display: block;
+    text-align: center;
+    max-height: 401px;
+    width: 100vw;
+    margin-left: -20px;
+    object-fit: contain;
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__btn-sign {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: end;
+  }
+
+  &__swiper {
+    border-radius: 30px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 483px;
+    overflow: hidden;
+    background-color: white;
+
+    & .swiper-wrapper {
+      width: auto !important;
+      display: flex;
+    }
+
+    & .swiper-slide {
+      width: 100% !important;
+      flex-shrink: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__pagination {
+    display: block;
+    position: static;
+    margin-top: 42px;
+    margin-bottom: 31px;
+
+    @include on-desktop {
+      margin-top: 49px;
+      margin-bottom: 57px;
+    }
+
+    & span {
+      width: 17px;
+      height: 3px;
+      border-radius: 3px;
+      background-color: $blue;
+
+      @include on-desktop {
+        width: 30px;
+        height: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &__intro2 {
+    & h2 {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 14px;
+    }
+
+    & p {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    
+    @include on-desktop {
+      display: none;
+    }
+  }
+}
+
+.login {
+  display: none;
+  margin-top: 48px;
+  margin-bottom: 76px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 14px 21px;
+  box-sizing: border-box;
+
+  @include on-desktop {
+    display: flex;
+    width: fit-content;
+  }
+
+  & span {
+    color: transparent;
+    background: linear-gradient(to right, #579affff, #574dccff);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0px 20px 30px 0px rgba(88, 79, 205, 0.2);
+  }
+}

@@ -1,0 +1,52 @@
+.footer {
+  padding: 52px 0 51px 35px;
+
+  @include on-desktop {
+    padding: 103px 0 90px;
+  }
+
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include on-tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+    display: grid;
+    row-gap: 11px;
+
+    @include on-desktop {
+      margin-top: 39px;
+      row-gap: 21px;
+    }
+
+    &:nth-of-type(1) {
+      // margin-top: 0;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+    
+    @include on-desktop {
+      font-size: 22px;
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+
+    @include on-desktop {
+      font-size: 22px;
+    }
+  }
+}

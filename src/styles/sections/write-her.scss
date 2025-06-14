@@ -1,0 +1,30 @@
+.write-her {
+  display: none;
+  margin-top: 217px;
+
+  @include on-desktop {
+    display: flex;
+  }
+
+  &__content {
+    display: grid;
+    align-content: center;
+  }
+
+  &__text {
+    margin-top: 32px;
+    font-size: 21px;
+  }
+
+  &__btn {
+    margin-top: 36px;
+    height: 67px;
+    max-width: 357px;
+  }
+
+  &__img {
+    & img {
+      max-height: 818px;
+    }
+  }
+}

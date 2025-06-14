@@ -1,0 +1,29 @@
+{
+  "name": "streaming-landing",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel ./src/index.html --open",
+    "build": "parcel build --public-url=/dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@parcel/transformer-sass": "^2.15.2",
+    "eslint": "^9.29.0",
+    "eslint-import-resolver-typescript": "^4.4.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.2.0",
+    "parcel": "^2.15.2",
+    "typescript-eslint": "^8.34.0"
+  },
+  "dependencies": {
+    "inputmask": "^5.0.9",
+    "swiper": "^11.2.8"
+  }
+}

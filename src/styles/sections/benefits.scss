@@ -1,0 +1,32 @@
+.benefits {
+  margin-top: 69px;
+
+  @include on-desktop {
+    margin-top: 170px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__blocks {
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+    row-gap: 20px;
+
+    @include on-desktop {
+      row-gap: 10px;
+    }
+  }
+  
+  &__block {
+    padding: 42px 28px;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: white;
+    border-radius: 30px;
+  }
+}

@@ -1,0 +1,81 @@
+.people {
+  margin-top: 57px;
+  justify-items: center;
+
+  @include on-desktop {
+    margin-top: 172px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    max-width: 558px;
+
+    @include on-desktop {
+      font-size: 24px;
+      margin-top: 26px;
+      margin-bottom: 38px;
+    }
+  }
+
+  &__filler {
+    height: 305px;
+    width: 100vw;
+
+    @include on-desktop {
+      height: 410px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    height: 305px;
+
+    @include on-desktop {
+      position: absolute;
+      left: 0;
+      width: 100vw;
+      height: 410px;
+    }
+  }
+
+  &__swiper {
+    height: 305px;
+
+    @include on-desktop {
+      height: 410px;
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+
+    & img {
+      display: block;
+      height: 305px;
+      object-fit: contain;
+      width: auto;
+      overflow: hidden;
+      object-fit: contain;
+      
+      @include on-desktop {
+        height: 100%;
+      }
+    }
+
+    @include on-desktop {
+      max-width: 435px;
+      border-radius: 30px;
+    }
+  }
+}

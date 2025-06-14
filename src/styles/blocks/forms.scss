@@ -1,0 +1,284 @@
+.form {
+  max-width: 483px;
+  padding: 30px 36px 0 30px;
+  background-color: white;
+  font-size: 12px;
+
+  @include on-desktop {
+    font-size: 18px;
+    padding: 58px 64px 0 58px;
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column;
+    margin-top: 21px;
+    width: 100%;
+
+    @include on-desktop {
+      margin-top: 27px;
+    }
+  }
+
+  &__input {
+    color: $main-color-text;
+    padding: 12px 11px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: $inputs-color;
+    font-size: 12px;
+
+    &::placeholder {
+      color: $placeholder-color;
+      font-size: 12px;
+
+      @include on-desktop {
+        font-size: 18px;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+    @include on-desktop {
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0px 20px 30px 0px rgba(88, 79, 205, 0.2);
+    }
+  }
+
+  &__terms {
+    margin-block: 17px;
+    display: flex;
+    gap: 13px;
+    font-size: 10px;
+    user-select: none;
+
+    & input {
+      display: none;
+    }
+
+    & input:checked + .form__checkbox {
+      background-color: $blue;
+    }
+
+    & input:checked + .form__checkbox::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 6px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    & .form__checkbox {
+      width: 20px;
+      height: 20px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      position: relative;
+      border: none;
+
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 0px 20px 30px 0px rgba(88, 79, 205, 0.2);
+      }
+    }
+
+    & .form__label-checkbox {
+      max-width: 352px;
+      width: 100%;
+      font-size: 10px;
+      color: $placeholder-color;
+
+      @include on-desktop {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__sign {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    height: 38px;
+    font-size: 14px;
+    font-weight: bold;
+
+    @include on-desktop {
+      height: 60px;
+      font-size: 18px;
+    }
+  }
+
+  &__gender {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .gender-options {
+      margin-bottom: 6px;
+
+      @include on-desktop {
+        margin-bottom: 11px;
+      }
+    }
+
+    .gended-sex {
+      display: flex;
+      justify-content: center;
+      gap: 1px;
+    }
+
+    .gender-button {
+      position: relative;
+      cursor: pointer;
+      flex: 1;
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      span {
+        display: block;
+        padding-block: 10px;
+        border-radius: 6px;
+        background-color: $inputs-color;
+        color: $placeholder-color;
+        transition: background-color 0.3s, color 0.3s;
+        text-align: center;
+      }
+
+      input[type="radio"]:checked + span {
+        background-color: $blue;
+        color: #fff;
+      }
+
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 0px 20px 30px 0px rgba(88, 79, 205, 0.2);
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 6px;
+
+    @include on-desktop {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__google {
+    &--mail {
+      margin-top: 17px;
+      margin-bottom: 10px;
+
+      @include on-desktop {
+        margin-top: 29px;
+        margin-bottom: 21px;
+      }
+    }
+
+    & button {
+      position: relative;
+      width: 100%;
+      padding-block: 10px;
+      background-color: $primary-blue;
+      text-align: center;
+      border-radius: 10px;
+      height: 38px;
+      border: none;
+      color: white;
+      font-size: 14px;
+
+      @include on-desktop {
+        padding-block: 19px;
+        font-size: 18px;
+        height: 60px;
+      }
+
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 0px 20px 30px 0px rgba(88, 79, 205, 0.2);
+      }
+    }
+  }
+
+  &__ico {
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    padding: 8px;
+    border-radius: 7px;
+    background-color: white;
+
+    & img {
+      width: 15px;
+      height: 15px;
+      display: block;
+
+      @include on-desktop {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @include on-desktop {
+      padding: 12px;
+    }
+  }
+
+  &__password-wrapper {
+    display: flex;
+    position: relative;
+
+    & input {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    color: #595b75;
+    font-size: 10px;
+    text-align: center;
+
+    @include on-desktop {
+      font-size: 14px;
+    }
+  }
+}
+
+.toggle-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  
+  & svg {
+    height: 20px;
+    fill: $placeholder-color;
+
+    @include on-desktop {
+      height: 25px;
+    }
+  }
+}
+.password-hide {
+  display: none;
+}
