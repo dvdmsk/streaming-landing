@@ -9,7 +9,7 @@
     "start": "parcel ./src/index.html --open",
     "build": "parcel build src/index.html --public-url ./",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -b gh-pages --message \"Deploy\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
