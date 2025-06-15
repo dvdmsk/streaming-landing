@@ -38,8 +38,6 @@
     height: 305px;
 
     @include on-desktop {
-      position: absolute;
-      left: 0;
       width: 100vw;
       height: 410px;
     }

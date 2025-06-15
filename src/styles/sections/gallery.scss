@@ -1,17 +1,26 @@
 .gallery {
   height: 305px;
+  justify-items: center;
 
   @include on-desktop {
     height: 600px;
   }
 
+  &__filler {
+    height: 305px;
+    width: 100vw;
+
+    @include on-desktop {
+      height: 600px;
+    }
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
+    height: 305px;
 
     @include on-desktop {
-      position: absolute;
-      left: 0;
       width: 100vw;
       height: 600px;
     }
