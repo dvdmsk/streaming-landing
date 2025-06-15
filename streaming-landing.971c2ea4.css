@@ -686,6 +686,7 @@ ul {
 }
 
 .gallery {
+  justify-items: center;
   height: 305px;
 }
 
@@ -695,7 +696,19 @@ ul {
   }
 }
 
+.gallery__filler {
+  width: 100vw;
+  height: 305px;
+}
+
+@media (width >= 1024px) {
+  .gallery__filler {
+    height: 600px;
+  }
+}
+
 .gallery__wrapper {
+  height: 305px;
   display: flex;
   position: relative;
 }
@@ -704,8 +717,6 @@ ul {
   .gallery__wrapper {
     width: 100vw;
     height: 600px;
-    position: absolute;
-    left: 0;
   }
 }
 
@@ -966,8 +977,6 @@ ul {
   .people__wrapper {
     width: 100vw;
     height: 410px;
-    position: absolute;
-    left: 0;
   }
 }
 
